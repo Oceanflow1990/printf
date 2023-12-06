@@ -11,7 +11,8 @@ int print_pointer(va_list val)
 	void *p;
 	char *s = "(nil)";
 	long int a;
-	int i, b;
+	int i;
+	int b;
 
 	p = va_arg(val, void*);
 	if (p == NULL)
