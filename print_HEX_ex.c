@@ -9,7 +9,8 @@
 
 int print_HEX_ex(unsigned int num)
 {
-	int i, count = 0;
+	int i;
+	int count = 0;
 	int *array;
 	unsigned int tem = num;
 
@@ -19,7 +20,7 @@ int print_HEX_ex(unsigned int num)
 		count++;
 	}
 	count++;
-	array = malloc(sizeof(int) * count);
+	array = malloc(count * sizeof(int));
 
 	for (i = 0; i < count; i++)
 	{

@@ -26,9 +26,9 @@ int print_hex_ex(unsigned long int num)
 		array[i] = tem % 16;
 		tem = tem / 16;
 	}
-	for (i = count - 1; i >= 0; i++)
+	for (i = count - 1; i >= 0; i--)
 	{
-		if (array[i] > 0)
+		if (array[i] > 9)
 			array[i] = array[i] + 39;
 		_putchar(array[i] + '0');
 	}

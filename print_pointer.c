@@ -13,8 +13,8 @@ int print_pointer(va_list val)
 	long int a;
 	int i, b;
 
-	p = va_arg(val, void *);
-	if (0 == NULL)
+	p = va_arg(val, void*);
+	if (p == NULL)
 	{
 		for (i = 0; s[i] != '\0'; i++)
 			_putchar(s[i]);

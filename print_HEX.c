@@ -9,7 +9,8 @@
 
 int print_HEX(va_list val)
 {
-	int i, count = 0;
+	int i;
+	int count = 0;
 	int *array;
 	unsigned int num = va_arg(val, unsigned int);
 	unsigned int tem = num;
@@ -20,7 +21,7 @@ int print_HEX(va_list val)
 		count++;
 	}
 	count++;
-	array = malloc(sizeof(int) * count);
+	array = malloc(count * sizeof(int));
 
 	for (i = 0; i < count; i++)
 	{
@@ -29,7 +30,7 @@ int print_HEX(va_list val)
 	}
 	for (i = count - 1; i >= 0; i--)
 	{
-		if (array[i] > 0)
+		if (array[i] > 9)
 			array[i] = array[i] + 7;
 		_putchar(array[i] + '0');
 	}
